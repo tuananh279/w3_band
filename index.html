@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
-    <title>Document</title>
+    <title>w3_band</title>
 </head>
 <body>
     <div id="main">
@@ -53,20 +53,20 @@
                 <p class="about-text">
                     This is our band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <div class="members-list">
-                    <div class="member-item">
+                <div class="row members-list">
+                    <div class="col col-third text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="./assets/team/member1.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">
                             Name
                         </p>
                         <img src="./assets/team/member1.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">
                             Name
                         </p>
@@ -87,34 +87,34 @@
                     </ul>
 
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third">
                             <img src="./assets/places/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Fri 27 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/places/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Sat 28 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/places/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Fri 29 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -123,12 +123,75 @@
             </div>
 
             <!-- Contact section -->
-            <div class="content-section"> 
+            <div class="content-section">
+                
+            </div> 
         </div>
 
         <div id="footer">
 
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="ti-bag" style="margin-right: 16px;"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+                
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-email"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="mail" class="modal-input" placeholder="Send to">
+
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function showBuyTickets() {
+            modal.classList.add('open')    
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 </html>
