@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
-    <title>w3_band</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <title>band tuan.h</title>
 </head>
 <body>
     <div id="main">
         <div id="header">
             <!-- Begin: nav -->
             <ul id="nav">
-                <li><a href="http://">Home</a></li>
-                <li><a href="http://">Band</a></li>
-                <li><a href="http://">Tour</a></li>
-                <li><a href="http://">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="http://">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,16 +39,18 @@
             <!-- End: Search button -->
         </div>
 
+        <!-- Begin: Slider section -->
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
                 <div class="text-description">The atmosphere in New York is lorem ipsum</div>
             </div>
         </div>
+        <!-- End: Slider section -->
 
         <div id="content">
             <!-- About section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
@@ -76,7 +79,7 @@
             </div>
 
             <!-- Tour section -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
@@ -94,7 +97,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Fri 27 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -104,7 +107,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Sat 28 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -114,7 +117,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="play-time">Fri 29 Nov 2016</p>
                                 <div class="play-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -122,8 +125,8 @@
                 </div>
             </div>
 
-            <!-- Contact section -->
-            <div class="content-section">
+            <!-- Begin: Contact section -->
+            <div id="contact" class="content-section">
                 <div class="section-heading">CONTACT</div>
                 <div class="section-sub-heading">Fan? Drop a note!</div>
 
@@ -148,16 +151,30 @@
                                     <input type="text" name="" required placeholder="Message" id="" class="form-control">
                                 </div>
                             </div>
-                            <input type="submit" class="form-submit-btn mt-16" value="SEND">
+                            <input type="submit" class="btn mt-16 pull-right" value="SEND">
                         </form>
                     </div>
                 </div>
             </div> 
+            <!-- End: Contact section -->
+            <div class="map-section">
+                <img src="./assets/map/map.jpg" alt="Map">
+            </div>
         </div>
 
+        <!-- Begin: Footer section -->
         <div id="footer">
-
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="https://github.com/tuananh279/w3_band">tuananh279</a></p>
         </div>
+        <!-- End: Footer section -->
     </div>
     <!-- Modal -->
     <div class="modal js-modal">
@@ -191,7 +208,8 @@
             </div>
 
             <div class="modal-footer">
-                <p class="modal-help">Need <a href="">help?</a></p>
+                <p class="modal-help">Need <a href="">help?</a>
+                </p>
             </div>
         </div>
     </div>
