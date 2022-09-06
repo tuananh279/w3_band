@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
     <title>band tuan.h</title>
@@ -36,7 +37,11 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+            <div class="mobile-menu-btn js-mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End: Search button -->
+        
         </div>
 
         <!-- Begin: Slider section -->
@@ -219,6 +224,11 @@
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
+        const mobileMenuBtn = document.querySelector('.js-mobile-menu-btn')
+        const header = document.getElementById('header')
+        const menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+
+        var headerHeight = header.clientHeight
 
         function showBuyTickets() {
             modal.classList.add('open')    
@@ -237,6 +247,19 @@
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', function () {
+            header.style.height = header.clientHeight == headerHeight ? 'auto' : null
+        })
+
+        // Auto close when click menu
+        for(menuItem of menuItems) {
+            if(menuItem)
+            menuItem.addEventListener('click', function() {
+                header.style.height = null
+            })
+        }
     </script>
 </body>
 </html>
