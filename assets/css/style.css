@@ -71,6 +71,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px !important;
+}
+
 .btn {    
     width: 109px;
     height: 38px;
