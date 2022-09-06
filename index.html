@@ -32,16 +32,19 @@
                 </li>
             </ul>
             <!-- End: Nav -->
+            
+            <!-- Begin: Mobile menu button -->
+            <div class="mobile-menu-btn js-mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            <!-- End: Mobile menu button -->
 
             <!-- Begin: Search button -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <div class="mobile-menu-btn js-mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div>
             <!-- End: Search button -->
-        
+
         </div>
 
         <!-- Begin: Slider section -->
@@ -177,7 +180,7 @@
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-linkedin"></i></a>
             </div>
-            <p class="copyright">Powered by <a href="https://github.com/tuananh279/w3_band">tuananh279</a></p>
+            <p class="copyright">Powered by <a href="https://github.com/tuananh279/w3_band" target="_blank">tuananh279</a></p>
         </div>
         <!-- End: Footer section -->
     </div>
@@ -255,7 +258,6 @@
 
         // Auto close when click menu
         for(menuItem of menuItems) {
-            if(menuItem)
             menuItem.addEventListener('click', function() {
                 header.style.height = null
             })
