@@ -258,8 +258,14 @@
 
         // Auto close when click menu
         for(menuItem of menuItems) {
+            const isParentMenu = menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav')
+           
             menuItem.addEventListener('click', function() {
-                header.style.height = null
+                if(isParentMenu) {
+                    event.preventDefault()
+                } else {
+                    header.style.height = null
+                }
             })
         }
     </script>
