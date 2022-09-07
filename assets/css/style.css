@@ -86,6 +86,7 @@ html {
     margin-top: 15px;
     cursor: pointer;
     border: none;
+    appearance: none;
 }
 
 .btn:hover {
